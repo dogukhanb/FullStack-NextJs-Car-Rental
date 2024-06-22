@@ -13,7 +13,6 @@ export const POST = async (req) => {
   try {
     //1) isteğin body kısmında gelen satın alınacak araç verisine eriş
     const product = await req.json();
-
     //2) stripte catalog'una kaydedilmiş ürünleri al
     const stripeProducts = await getActiveProducts();
 
@@ -58,7 +57,7 @@ export const POST = async (req) => {
   } catch (err) {
     return NextResponse.json(
       {
-        message: "Ödeme oturumu oluşturulurken hata meydana geldi",
+        message: "Ödeme oturumu olşturulurken hata meydana geldi",
       },
       { status: 500 }
     );

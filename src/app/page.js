@@ -2,8 +2,7 @@ import { headers } from "next/headers";
 import Card from "./(components)/Card";
 import Link from "next/link";
 
-// proje geliştirme sürecinde farklı portlarda veya yayınlandıktan sonra farklı host adresinde çalışabileceğinden istek atılan api adresini dinamik yap
-
+// proje geliştirme sürecinde farklı portlarda veya yayınlandıktan sonra farklı host adresinde çalışabilceğinden istek atılan api adresini dinamik yaotık
 const host = headers().get("host");
 const protocol = headers().get("x-forwarded-proto");
 export const baseUrl = `${protocol}://${host}`;

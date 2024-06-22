@@ -14,9 +14,9 @@ const OrderButton = ({ vehicle, baseUrl }) => {
       method: "POST",
       body: JSON.stringify(vehicle),
     })
-      //2) backend  satın alım sayfasınını linki gönder
+      //2) backend buraya satın alım sayfasınını linki gönder
       .then((res) => res.json())
-      //3) kullanıcıyı satın alım sayfasına yönlendir
+      //3) kullanıcyı satın alım sayfasına yönlendir
       .then((data) => {
         window.location.href = data.url;
       })

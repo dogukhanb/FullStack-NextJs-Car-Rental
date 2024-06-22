@@ -6,7 +6,7 @@ export async function GET() {
     // veritabanından bütün araçları al
     const vehicles = await Vehicle.find();
 
-    // clienta gönder
+    // client'a gönder
     return NextResponse.json({
       message: "Araçlar bulundu",
       data: vehicles,

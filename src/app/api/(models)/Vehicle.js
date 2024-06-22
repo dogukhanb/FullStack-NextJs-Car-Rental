@@ -1,12 +1,13 @@
-import mongoose, { Schema } from "mongoose";
+import mongoose from "mongoose";
 
+// mongodb veritbanına bağlan
 mongoose.connect(process.env.MONGO_URL);
 
+// ayar
 mongoose.Promise = global.Promise;
 
-// sema olustur
-
-const VehiclesSchema = new mongoose.Schema({
+// şema oluşturma
+const VehicleSchema = new mongoose.Schema({
   make: String,
   model: String,
   year: Number,
@@ -18,9 +19,11 @@ const VehiclesSchema = new mongoose.Schema({
   condition: String,
   imageUrl: String,
 });
-// model olustur
+
+// model oluştur
+// performanc açısından her importta yeni model oluşturmamak için önce mevcut modellerin arasında Vehicle modeli varmı kontrol ediyor varsa onu export ediyor yoksa yenisini oluşturup export eder
 
 const Vehicle =
-  mongoose.models?.Vehicle || mongoose.model("Vehicle", VehiclesSchema);
+  mongoose.models?.Vehicle || mongoose.model("Vehicle", VehicleSchema);
 
 export default Vehicle;
