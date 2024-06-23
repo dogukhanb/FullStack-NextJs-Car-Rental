@@ -1,8 +1,6 @@
 <h1> FullStack-Car Rental<h1>
 
-<h2>NextJs Kullanılarak Geliştirildi.</h2>
-
-<h3>FullStack Car Rental Sayfası<h3>
+<h2>NextJs ve Stripe Kullanılarak Satın Alım Yapılabilen FullStack Car Rental Sayfası</h2>
 
 <img src="car-rental.gif"/>
 
